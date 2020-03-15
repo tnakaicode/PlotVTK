@@ -3,8 +3,7 @@ import matplotlib.pyplot as plt
 import meshio
 
 reader = meshio.read("pep1_7_OmegaV.vtu")
-reader.points
-reader.cells
+print(reader)
 x = reader.points
 triangles = reader.cells['triangle']
 reader.point_data
