@@ -16,6 +16,8 @@ reader.GetNumberOfPointArrays()
 points = data.GetPoints()
 npts = points.GetNumberOfPoints()
 x = vtk_to_numpy(points.GetData())
+print(points.GetData())
+print(x)
 
 triangles = vtk_to_numpy(data.GetCells().GetData())
 ntri = triangles.size // 4  # number of cells
