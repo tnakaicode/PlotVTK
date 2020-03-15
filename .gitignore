@@ -1,3 +1,23 @@
+# VSCode
+.vscode/*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyc[cod]
+
+# Build
+build/*
+
+# Doc
+*.pdf
+*.docx
+tex2pdf*/*
+
+#tmp
+tmp/*
+temp_*/*
+*/temp_*/*
 
 .ipynb_checkpoints/notebook-checkpoint.ipynb
 sparkmonitor_kernelextension.log
