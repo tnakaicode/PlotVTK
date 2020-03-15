@@ -22,12 +22,18 @@ if __name__ == '__main__':
     tri = reader.cells["quad"]
     dat_scl = reader.point_data["scalars"]
     dat_vec = reader.point_data["vectors"]
-    
+
     obj = plot2d()
     obj.new_3Dfig()
     obj.axs.plot(xyz[:, 0], xyz[:, 1], xyz[:, 2])
     obj.SavePng_Serial()
-    
+
+    obj.axs.scatter(xyz[:, 0], xyz[:, 1], xyz[:, 2])
+    obj.SavePng_Serial()
+
+    obj.axs.plot_trisurf(xyz[:, 0], xyz[:, 1], xyz[:, 2])
+    obj.SavePng_Serial()
+
     obj.new_2Dfig()
     obj.axs.tricontourf(xyz[:, 0], xyz[:, 1], dat_scl, cmap="jet")
     obj.SavePng_Serial()
